@@ -27,7 +27,7 @@ google_wales_rolling_avg <- google_wales_rolling_avg %>%
     mutate(
         variable = case_when(
             variable == "Parks" ~ "Parciau",
-            variable == "Residential" ~ "Ardaloedd  preswyl",
+            variable == "Residential" ~ "Ardaloedd preswyl",
             variable == "Public transport" ~ "Trafnidiaeth gyhoeddus",
             variable == "Retail and recreation" ~ "Siopa a hamdden",
             variable == "Supermarkets and pharmacy" ~ "Archfarchnadoedd a fferyllfeydd",
@@ -139,7 +139,7 @@ google_plot_nation <- google_nation_rolling_average %>%
         (cyfartaledd treigl 7 diwrnod)",
         color = "",
         caption = c('Ffynhonnell: Adroddiadau ar Symudedd Cymunedol COVID-19 Google, Google LLC.',
-                    'Yn seiliedig ar gyfartaledd yr holl fesurau')
+                    'Yn seiliedig ar gyfartaledd yr holl fesurau, ac eithrio preswyl a gweithleoedd')
     ) +
     theme_minimal() +
     theme(

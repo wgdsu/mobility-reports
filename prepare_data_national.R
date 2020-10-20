@@ -73,7 +73,9 @@ google_uk_rolling_avg <- uk_summary %>%
 
 ### UK nations
 nation_summary <- google_by_country %>%
-    filter(REGION_NM != "United Kingdom") %>%
+    filter(REGION_NM != "United Kingdom",
+           !(variable %in% c("Residential", "Workplaces"))
+           ) %>%
     group_by(date, REGION_NM) %>%
     summarise(mean_pct = mean(value, na.rm = T))
 

@@ -74,7 +74,7 @@ google_plot_nation <- google_nation_rolling_average %>%
                     (7 day rolling average)",
         color = "",
         caption = c('Source: Google LLC "Google COVID-19 Community Mobility Reports."',
-                    'Based on the average of all measures')
+                    'Based on the average of all measures, excluding Residential and Workplaces')
     ) +
     theme_minimal() +
     theme(
